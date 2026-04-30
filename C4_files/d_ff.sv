@@ -34,6 +34,7 @@ always_ff @(posedge clk, negedge rst) // falling adge on clk or asynchronous res
     q <= 1'b0;
     qbar <= 1'b1;
     end // normal operation 
+  else
     begin
     q <= d;// stores the value of d (state)
     qbar <= ~d; // inverted state logic

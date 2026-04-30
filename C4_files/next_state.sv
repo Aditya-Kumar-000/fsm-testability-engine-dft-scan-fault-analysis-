@@ -30,7 +30,7 @@
 // To insert a fault, change ONE of the following lines to `define`
 
 `undef FSA0 // undefine a macro 
-`undef FSA1
+`define FSA1 // defined it for 2.3 b
 
 // by default no fault is active
 
@@ -55,8 +55,8 @@ nand g1 (e, s_bar, t); // nand gate with input s_bar and t and output e
 // `ifdef is defined then the code b/w tht `ifdeff and the next preprocessing directive ins kept otherwise its skipped.
 
 
-`ifdef FSA0 // include following block if MACRO is not defined
-assign f = 1'b0; // if FSA0 is defined only then f --> 0 
+`ifdef FSA0 // include following block if MACRO is not defined ****
+assign f = 1'b0; // if FSA0 is defined only then f --> 0  *** Basically stuck at 0 fault
 `elsif FSA1 // else if for preprocessor
 assign f = 1'b1;
 `else

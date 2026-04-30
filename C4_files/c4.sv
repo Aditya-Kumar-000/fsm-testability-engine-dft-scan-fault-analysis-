@@ -21,9 +21,9 @@
 /////////////////////////////////////////////////////////////////////
 
 
-module c4 (output logic s, t, input logic n_clk, rst, a);
+module c4 (output logic k, l, input logic n_clk, rst, a);
 
-logic s_plus, t_plus, s_bar, t_bar, clk;
+logic s_plus, t_plus, s_bar, t_bar, clk,s,t;
 
 assign clk = ~n_clk; // clock inversion
 
@@ -31,7 +31,7 @@ next_state n0 (.*); // instanties everything from next_state.sv
 d_ff d0 (.q(s), .qbar(s_bar), .clk(clk), .rst(rst), .d(s_plus)); // stores the states S and T 
 d_ff d1 (.q(t), .qbar(t_bar), .clk(clk), .rst(rst), .d(t_plus));
 //output_reg o1 (.*);
-//output_comb c1 (.*)
+output_comb c1 (.*)
 
 
 

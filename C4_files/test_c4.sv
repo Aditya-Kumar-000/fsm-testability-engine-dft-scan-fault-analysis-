@@ -26,8 +26,8 @@ module test_c4;
 timeunit 1ns;
 timeprecision 100ps;
 
-logic s, t;
-logic n_clk, rst, a;
+logic k,l;
+logic n_clk, rst, a,b;
 
 c4 c4 (.*);
 
@@ -39,25 +39,28 @@ initial
   end
   
 initial
-
-  begin
+begin
   rst = 1;
   a = 0;
+  b = 0;
+
   #10 rst = 0;
   #10 rst = 1;
-  #20 a = 0;
-  #20 a = 1;
-  #20 a = 1;
-  #20 a = 1;
-  #20 a = 0;
-  #20 a = 1;
-  #20 a = 0;
-  #20 a = 1;
-  #20 a = 1;
-  #20 a = 0;
-  #20 a = 0;
+
+  #20 a = 0; b = 0;
+  #20 a = 1; b = 0;
+  #20 a = 1; b = 1;
+  #20 a = 1; b = 0;
+  #20 a = 0; b = 1;
+  #20 a = 1; b = 1;
+  #20 a = 0; b = 0;
+  #20 a = 1; b = 1;
+  #20 a = 1; b = 0;
+  #20 a = 0; b = 1;
+  #20 a = 0; b = 0;
+
   #20 $finish;
-  end
+end
 
 endmodule
   
