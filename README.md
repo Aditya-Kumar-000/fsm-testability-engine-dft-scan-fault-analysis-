@@ -89,3 +89,18 @@ These are **core concepts used in real ASIC/FPGA design flows**.
 ---
 
 ## File Structure
+
+Theta_3/
+├── C4_files
+│   ├── C4_pins.qsf
+│   ├── all.txt
+│   ├── c4.sv
+│   ├── d_ff.sv
+│   ├── next_state.sv
+│   ├── output_comb.sv
+│   ├── output_reg.sv
+│   ├── scan_dff.sv
+│   └── test_c4.sv
+├── all.sv
+└── notes-2.pdf
+
