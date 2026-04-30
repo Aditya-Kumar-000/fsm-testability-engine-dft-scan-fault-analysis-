@@ -90,8 +90,9 @@ These are **core concepts used in real ASIC/FPGA design flows**.
 
 ## File Structure
 
+## File Structure
 Theta_3/
-├── C4_files
+├── C4_files/
 │   ├── C4_pins.qsf
 │   ├── all.txt
 │   ├── c4.sv
@@ -103,4 +104,3 @@ Theta_3/
 │   └── test_c4.sv
 ├── all.sv
 └── notes-2.pdf
-
