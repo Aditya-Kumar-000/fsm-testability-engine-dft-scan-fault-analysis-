@@ -35,7 +35,7 @@ initial
   begin
   n_clk = 0;
   #20;
-  forever #10 n_clk = ~n_clk;
+  forever #10 n_clk = ~n_clk; // the internal clock is inverted to suit FPGA
   end
   
 initial
@@ -45,13 +45,17 @@ initial
   a = 0;
   #10 rst = 0;
   #10 rst = 1;
-  #40 a = 1;
-  #60 a = 0;
-  #20 a = 1;
-  #20 a = 0;
-  #40 a = 1;
   #20 a = 0;
   #20 a = 1;
+  #20 a = 1;
+  #20 a = 1;
+  #20 a = 0;
+  #20 a = 1;
+  #20 a = 0;
+  #20 a = 1;
+  #20 a = 1;
+  #20 a = 0;
+  #20 a = 0;
   #20 $finish;
   end
 

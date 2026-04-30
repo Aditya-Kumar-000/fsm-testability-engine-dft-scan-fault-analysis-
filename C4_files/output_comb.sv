@@ -25,8 +25,8 @@ logic b_bar, v, w;
 
 nand g7 (v, s_bar, t);
 nand g8 (w, t_bar, b);
-nand g9 (k, v, w);
+nand g9 (k, v, w); // output k = NAND (g8),  NAND (g9)
 not g10 (b_bar, b);
-and g11 (l, b_bar, t);
+and g11 (l, b_bar, t); // output L = (NOT B and T)
     
 endmodule
